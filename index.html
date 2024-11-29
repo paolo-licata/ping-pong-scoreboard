@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .winner {
+        color: green;
+      }
+
+      .loser {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="./img/pingpong-img.jpeg" alt="Ping Pong" class="hero-image" />
+        <h3>Ping Pong Score Keeper</h3>
+      </div>
+
+      <div class="scoreboard">
+        <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+        <p>Use the buttons below to keep score</p>
+        <h2>Playing to</h2>
+        <select name="playto" id="playto">
+          <option value="5">5</option>
+          <option value="7">7</option>
+          <option value="9">9</option>
+          <option value="11">11</option>
+          <option value="21">21</option>
+        </select>
+        <div class="buttons">
+          <button id="p1Button">+1 Player One</button>
+          <button id="p2Button">+1 Player Two</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.log("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

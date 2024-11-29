@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 8px #0000003f;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.scoreboard h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.scoreboard p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.scoreboard h2 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+select {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#p1Button {
+	background-color: #4c7eda;
+	color: white;
+}
+
+#p2Button {
+	background-color: #b54e49;
+	color: white;
+}
+
+#reset {
+	background-color: #6a6a6a;
+	color: white;
+}
+
+#winner {
+  color: rgb(15, 193, 15);
+}
+
+#loser {
+  color: red;
+}
+
+@media (max-width: 600px) {
+	.container {
+		width: 95%;
+	}
+}
