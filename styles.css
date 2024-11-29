@@ -72,6 +72,7 @@ button {
   border-radius: 25px;
   cursor: pointer;
   transition: background 0.3s ease;
+	touch-action: manipulation;
 }
 
 button:active {
